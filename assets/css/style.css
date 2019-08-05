@@ -1,0 +1,141 @@
+*,body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+:root
+{
+    --color-prymary-dark: #222222;
+    --color-secondary-dark:  #1ab3ab;
+    --color-letra-dark: #ffffff;
+}
+#pg1
+{
+    background-color: var(--color-prymary-dark);
+    background-image: url(../img/bg/astronomy-constellation-dark-998641.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pg
+{
+    width: 100%;
+    height: 100vh;
+}
+.navbar-dark .navbar-nav .nav-link:hover 
+{
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+#pg1 .navbar-brand:hover
+{
+   -o-animation-name: changeColor;
+   -webkit-animation-name: changeColor;
+   -moz-animation-name: changeColor;
+   animation-name: changeColor;
+
+   -o-animation-duration: 0.5s;
+   -webkit-animation-duration: 0.5s;
+   -moz-animation-duration: 0.5s;
+   animation-duration: 0.5s;
+
+   -o-animation-iteration-count: infinite;
+   -webkit-animation-iteration-count: infinite;
+   -moz-animation-iteration-count: infinite;
+   animation-iteration-count: infinite;
+
+   -o-animation-direction: alternate;
+   -webkit-animation-direction: alternate;
+   -moz-animation-direction: alternate;
+   animation-direction: alternate;
+}
+@-o-keyframes changeColor
+{
+  0%{color: rgb(255, 255, 30);}
+  100%{color: rgb(255, 208, 53);}
+}
+@-webkit-keyframes changeColor
+{
+  0%{color: rgb(255, 255, 30);}
+  100%{color: rgb(255, 208, 53);}
+}
+@-moz-keyframes changeColor
+{
+  0%{color: rgb(255, 255, 30);}
+  100%{color: rgb(255, 208, 53);}
+}
+@keyframes changeColor
+{
+    0%{color: rgb(255, 255, 30);}
+    100%{color: rgb(255, 208, 53);}
+}
+
+.social
+{
+    margin: 0px 15px;
+}
+h1
+{
+    color: var(--color-letra-dark);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 30vh;
+    font-weight: 400;
+    font-family:  'Slabo 27px', serif;
+    font-size: 70px;
+}
+#subt
+{
+    color: var(--color-letra-dark);
+    font-size: 15px;
+    text-align: center;
+}
+
+
+#pg2
+{
+    background-color: var(--color-prymary-dark);
+}
+
+
+#pg5
+{
+    margin: 0;
+}
+#pg5 #info
+{
+    background: var(--color-prymary-dark);
+}
+#info h4
+{
+    font-size: 45px;
+    font-family: 'Slabo 27px', sans-serif;
+    color: var(--color-secondary-dark);
+    margin: 20vh 10% 10vh 5%;
+
+}
+#info p{
+    font-size: 19px;
+    margin: 5vh 10% 1vh 5%;
+    color: var(--color-letra-dark);
+    text-align: justify;
+}
+#info #correo
+{
+    text-decoration: none;
+    color: var(--color-letra-dark);
+}
+#info #correo:hover
+{
+    color: var(--color-secondary-dark);
+    transition: 0.5s;
+}
+#info img{
+    width: 30px;
+    
+}
+#c-wpp
+{
+    margin-left: 5%;
+    text-decoration: none;
+}
