@@ -3,6 +3,7 @@
     padding: 0px;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    text-decoration: none;
 }
 :root
 {
@@ -225,8 +226,81 @@ h1
 
 #pg2
 {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cproyecto{
+    background-color: var(--color-prymary-dark);
+    background-size: cover;
+    width: 300px;
+    min-height: 400px;
+    box-sizing: border-box;
+    margin: 20px;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0px 2px 15px rgba(41, 41, 41, 0.692);
+}
+#tic-tac-toe{
+    background-image: url(../img/bg/michi.jpg);
+}
+#firex{
+    background-image: url(../img/bg/finaanciera.jpg)
+}
+#sistema{
+    background-image: url(../img/bg/sun.jpg);
+}
+.tproyecto{
+    font-size: 20px;
+    color: var(--color-prymary-dark);
+    background-color: white;
+    margin: 20px 20%;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 0 white;
+    transition: 1s;
+}
+.cproyecto:hover .tproyecto{
+    box-shadow: 0 0 0 400px var(--color-prymary-dark);
+    color: white;
     background-color: var(--color-prymary-dark);
 }
+.dproyecto{
+    color: white;
+    margin: 20vh 30px 30px 30px;
+    text-align: justify;
+    font-size: 14px;
+    text-shadow: 0px 0px 3px black;
+}
+.lnikp{
+    border: 2px solid white;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    transition: 1s;
+}
+.lnikp:hover{
+    background: white;
+    color: #222222;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
 
 
 #pg5
