@@ -1,48 +1,51 @@
-*,body{
+/*****************   GENERAL       ************/
+
+*, body {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     scroll-behavior: smooth;
     text-decoration: none;
 }
-:root
-{
+
+:root {
     --color-prymary-dark: #222222;
-    --color-secondary-dark:  #1ab3ab;
+    --color-secondary-dark: #1ab3ab;
     --color-letra-dark: #ffffff;
+    --altoimg: 0px;
 }
 
-
-.pg
-{
+.pg {
     width: 100%;
     height: 100vh;
 }
-#cload
-{
+
+/*************    LOADING   ****************/
+
+#cload {
     background-color: #222222;
     position: fixed;
-    z-index: 1;
+    z-index: 100;
     transition: opacity 0.5s ease;
 }
-.load-finish
-{
+
+.load-finish {
     opacity: 0;
     pointer-events: none;
 }
-#loading
-{
+
+#loading {
     display: flex;
     position: absolute;
     z-index: 100;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     height: 40px;
-    top:50%;
+    top: 50%;
     align-items: center;
 }
-.objload
-{
+
+.objload {
     height: 40px;
     width: 5px;
     background: white;
@@ -50,297 +53,284 @@
     border-radius: 15px;
     animation: loading 0.8s infinite;
 }
-.objload:nth-child(2)
-{
+
+.objload:nth-child(2) {
     animation-delay: 0.2s;
 }
-.objload:nth-child(3)
-{
+
+.objload:nth-child(3) {
     animation-delay: 0.3s;
 }
-.objload:nth-child(4)
-{
+
+.objload:nth-child(4) {
     animation-delay: 0.4s;
 }
-.objload:nth-child(5)
-{
+
+.objload:nth-child(5) {
     animation-delay: 0.5s;
 }
-.objload:nth-child(6)
-{
+
+.objload:nth-child(6) {
     animation-delay: 0.6s;
 }
-.objload:nth-child(7)
-{
+
+.objload:nth-child(7) {
     animation-delay: 0.7s;
 }
-.objload:nth-child(8)
-{
+
+.objload:nth-child(8) {
     animation-delay: 0.8s;
 }
-.objload:nth-child(9)
-{
+
+.objload:nth-child(9) {
     animation-delay: 0.9s;
 }
-.objload:nth-child(10)
-{
+
+.objload:nth-child(10) {
     animation-delay: 1s;
 }
-.objload:nth-child(11)
-{
+
+.objload:nth-child(11) {
     animation-delay: 1.1s;
 }
-.objload:nth-child(12)
-{
+
+.objload:nth-child(12) {
     animation-delay: 1.2s;
 }
-.objload:nth-child(13)
-{
+
+.objload:nth-child(13) {
     animation-delay: 1.3s;
 }
 
-
-@keyframes loading{
-    0%{
+@keyframes loading {
+    0% {
         height: 0;
     }
-    50%{
+    50% {
         height: 40px;
     }
-    100%
-    {
+    100% {
         height: 0;
     }
 }
 
-.up
-{
+/*******    BOTON UP    ********/
+
+.up {
     position: fixed;
     width: 60px;
     height: 60px;
-    border-radius: 50%;
     bottom: 20px;
     right: 20px;
-    z-index: 10;
-    background-color:  rgba(255, 255, 255, 0.089);
     border-radius: 50%;
-    box-shadow:  -1px 1px 10px inset rgba(255, 255, 255, 0.089) ,-15px -15px 60px rgba(255, 255, 255, 0.199) inset ;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.089);
+    border-radius: 50%;
+    box-shadow: -1px 1px 10px inset rgba(255, 255, 255, 0.089), -15px -15px 60px rgba(255, 255, 255, 0.199) inset;
     transform: translate(-50%, -50%);
     transition: 1s;
     opacity: 0;
     cursor: pointer;
 }
-.up-act
-{
+
+.up-act {
     opacity: 1;
 }
-.up:hover{
-    box-shadow:  1px 1px 10px inset rgba(255, 255, 255, 0.233) ,-1px -1px 20px rgba(255, 255, 255, 0.075) inset ;
+
+.up:hover {
+    box-shadow: 1px 1px 10px inset rgba(255, 255, 255, 0.233), -1px -1px 20px rgba(255, 255, 255, 0.075) inset;
 }
-#img-up
-{
+
+#img-up {
     margin: 0px;
     position: absolute;
     left: 50%;
-    top:50%;
+    top: 50%;
     transform: translate(-50%, -50%);
 }
 
+/************      BOTON UP RESPONSIVE      ************/
 
-#pg1
-{
+@media (max-width: 600px) {
+    .up {
+        width: 40px;
+        height: 40px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+
+
+/**************   PG 1      *************/
+
+#pg1 {
     background-color: var(--color-prymary-dark);
     background-image: url(../img/bg/astronomy-constellation-dark-998641.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
-.navbar-dark .navbar-nav .nav-link:hover 
-{
+
+.navbar-dark .navbar-nav .nav-link:hover {
     text-shadow: 0px 0px 10px rgb(255, 255, 255);
 }
-#pg1 .navbar-brand:hover
-{
-   -o-animation-name: changeColor;
-   -webkit-animation-name: changeColor;
-   -moz-animation-name: changeColor;
-   animation-name: changeColor;
 
-   -o-animation-duration: 0.5s;
-   -webkit-animation-duration: 0.5s;
-   -moz-animation-duration: 0.5s;
-   animation-duration: 0.5s;
-
-   -o-animation-iteration-count: infinite;
-   -webkit-animation-iteration-count: infinite;
-   -moz-animation-iteration-count: infinite;
-   animation-iteration-count: infinite;
-
-   -o-animation-direction: alternate;
-   -webkit-animation-direction: alternate;
-   -moz-animation-direction: alternate;
-   animation-direction: alternate;
-}
-@-o-keyframes changeColor
-{
-  0%{color: rgb(255, 255, 30);}
-  100%{color: rgb(255, 208, 53);}
-}
-@-webkit-keyframes changeColor
-{
-  0%{color: rgb(255, 255, 30);}
-  100%{color: rgb(255, 208, 53);}
-}
-@-moz-keyframes changeColor
-{
-  0%{color: rgb(255, 255, 30);}
-  100%{color: rgb(255, 208, 53);}
-}
-@keyframes changeColor
-{
-    0%{color: rgb(255, 255, 30);}
-    100%{color: rgb(255, 208, 53);}
+#pg1 .navbar-brand:hover {
+    -o-animation-name: changeColor;
+    -webkit-animation-name: changeColor;
+    -moz-animation-name: changeColor;
+    animation-name: changeColor;
+    -o-animation-duration: 0.5s;
+    -webkit-animation-duration: 0.5s;
+    -moz-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -o-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -o-animation-direction: alternate;
+    -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+    animation-direction: alternate;
 }
 
-.social
-{
+@-o-keyframes changeColor {
+    0% {
+        color: rgb(255, 255, 30);
+    }
+    100% {
+        color: rgb(255, 208, 53);
+    }
+}
+
+@-webkit-keyframes changeColor {
+    0% {
+        color: rgb(255, 255, 30);
+    }
+    100% {
+        color: rgb(255, 208, 53);
+    }
+}
+
+@-moz-keyframes changeColor {
+    0% {
+        color: rgb(255, 255, 30);
+    }
+    100% {
+        color: rgb(255, 208, 53);
+    }
+}
+
+@keyframes changeColor {
+    0% {
+        color: rgb(255, 255, 30);
+    }
+    100% {
+        color: rgb(255, 208, 53);
+    }
+}
+
+.social {
     margin: 0px 15px;
 }
-h1
-{
+
+h1 {
     color: var(--color-letra-dark);
     text-align: center;
     display: flex;
     justify-content: center;
     margin-top: 30vh;
     font-weight: 400;
-    font-family:  'Slabo 27px', serif;
+    font-family: 'Slabo 27px', serif;
     font-size: 70px;
 }
-#subt
-{
+
+#subt {
     color: var(--color-letra-dark);
     font-size: 15px;
     text-align: center;
 }
 
+/**********    RESPONSIVE PG1    ***********/
 
-#pg2
+@media (max-width: 600px) {
+    h1 {
+        font-size: 50px;
+        margin: 30vh 5%;
+    }
+}
+
+/*******************        PAG 2      **********************/
+
+.proyecto {
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px 10%;
+    background: rgb(42, 42, 42);
+    background: linear-gradient(138deg, rgba(42, 42, 42, 1) 0%, rgba(36, 76, 76, 1) 49%, rgba(25, 132, 132, 1) 74%);
+}
+.imgproyecto{
+    background-color: white;
+    width: 100%;
+    height: var(--altoimg);
+    margin-top: 30vh;
+    box-shadow: 0px 2px 100px 10px rgba(0, 0, 0, 0.527);
+}
+.proyectodescripcion
 {
+    margin-top: 40vh;
+    color: var(--color-letra-dark);
+}
+.herramientas{
     background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.container{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.cproyecto{
-    background-color: var(--color-prymary-dark);
-    background-size: cover;
-    width: 300px;
-    min-height: 400px;
-    box-sizing: border-box;
-    margin: 20px;
-    border-radius: 5px;
-    text-align: center;
-    overflow: hidden;
-    box-shadow: 0px 2px 15px rgba(41, 41, 41, 0.692);
-}
-#tic-tac-toe{
-    background-image: url(../img/bg/michi.jpg);
-}
-#firex{
-    background-image: url(../img/bg/finaanciera.jpg)
-}
-#sistema{
-    background-image: url(../img/bg/sun.jpg);
-}
-.tproyecto{
-    font-size: 20px;
-    color: var(--color-prymary-dark);
-    background-color: white;
-    margin: 20px 20%;
-    padding: 10px;
+    width: 80%;
+    height: 45%;
+    margin: 0px 10% 0px 10% ;
     border-radius: 10px;
-    box-shadow: 0 0 0 0 white;
-    transition: 1s;
-}
-.cproyecto:hover .tproyecto{
-    box-shadow: 0 0 0 400px var(--color-prymary-dark);
-    color: white;
-    background-color: var(--color-prymary-dark);
-}
-.dproyecto{
-    color: white;
-    margin: 20vh 30px 30px 30px;
-    text-align: justify;
-    font-size: 14px;
-    text-shadow: 0px 0px 3px black;
-}
-.lnikp{
-    border: 2px solid white;
-    padding: 10px;
-    text-decoration: none;
-    color: white;
-    transition: 1s;
-}
-.lnikp:hover{
-    background: white;
-    color: #222222;
-    text-decoration: none;
-    border-radius: 5px;
+    border: solid 1px gray;
 }
 
 
+/*******************        PAG 5      **********************/
 
-
-
-
-
-
-
-
-
-#pg5
-{
+#pg5 {
     margin: 0;
 }
-#pg5 #info
-{
+
+#pg5 #info {
     background: var(--color-prymary-dark);
 }
-#info h4
-{
+
+#info h4 {
     font-size: 45px;
     font-family: 'Slabo 27px', sans-serif;
     color: var(--color-secondary-dark);
     margin: 20vh 10% 10vh 5%;
-
 }
-#info p{
+
+#info p {
     font-size: 19px;
     margin: 5vh 10% 1vh 5%;
     color: var(--color-letra-dark);
     text-align: justify;
 }
-#info #correo
-{
+
+#info #correo {
     text-decoration: none;
     color: var(--color-letra-dark);
 }
-#info #correo:hover
-{
+
+#info #correo:hover {
     color: var(--color-secondary-dark);
     transition: 0.5s;
 }
-#info img{
+
+#info img {
     width: 30px;
-    
 }
-#c-wpp
-{
+
+#c-wpp {
     margin-left: 5%;
     text-decoration: none;
 }
